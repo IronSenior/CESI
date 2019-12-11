@@ -1,0 +1,49 @@
+Wrote profile results to benchmark.py.lprof
+Timer unit: 1e-06 s
+
+Total time: 0.578887 s
+File: benchmark.py
+Function: singleCommitInsertBenchmarck at line 13
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    13                                           @profile
+    14                                           def singleCommitInsertBenchmarck():
+    15      2001       2255.0      1.1      0.4      for insert in range(2000):
+    16      2000     576479.0    288.2     99.6          cursor.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    17         1        153.0    153.0      0.0      db.commit()
+
+Total time: 0.930652 s
+File: benchmark.py
+Function: oneCommitPerInsertBenchmark at line 19
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    19                                           @profile
+    20                                           def oneCommitPerInsertBenchmark():
+    21      2001       2288.0      1.1      0.2      for insert in range(2000):    
+    22      2000     598192.0    299.1     64.3          cursor.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    23      2000     330172.0    165.1     35.5          db.commit()
+
+Total time: 0.906031 s
+File: benchmark.py
+Function: updateBenchmark at line 25
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    25                                           @profile
+    26                                           def updateBenchmark():
+    27      4001       3924.0      1.0      0.4      for primary_key in range(4000):    
+    28      4000     902107.0    225.5     99.6          cursor.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(primary_key + 250))
+
+Total time: 0.980129 s
+File: benchmark.py
+Function: deleteBenchmark at line 31
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    31                                           @profile
+    32                                           def deleteBenchmark():
+    33      4001       3992.0      1.0      0.4      for primary_key in range(4000):
+    34      4000     976137.0    244.0     99.6          cursor.execute("DELETE FROM american_football_event_states WHERE id = {}".format(primary_key + 250))
+
