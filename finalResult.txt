@@ -1,0 +1,33 @@
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.469 MiB   40.469 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.469 MiB    0.000 MiB       for insert in range(2000):
+    14   40.469 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.469 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.469 MiB   40.469 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.469 MiB    0.000 MiB       for insert in range(2000):
+    21   40.469 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.469 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.535 MiB   40.535 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.535 MiB    0.000 MiB       for insert in range(2000):
+    14   40.535 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15                                 DB.commit()
+
+

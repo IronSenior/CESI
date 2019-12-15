@@ -1,0 +1,120 @@
+single_commit_insert_benchmark:  33.28292682926829
+one_commit_per_insert_benchmark:  36.35671641791045
+update_benchmark:  39.67901234567902
+DELETE:  37.5144578313253
+ 
+ 
+single_commit_insert_benchmark:  39.09761904761905
+one_commit_per_insert_benchmark:  40.209523809523816
+update_benchmark:  37.701249999999995
+DELETE:  33.878651685393265
+ 
+ 
+single_commit_insert_benchmark:  36.8
+one_commit_per_insert_benchmark:  39.13055555555555
+update_benchmark:  36.283132530120476
+DELETE:  34.63928571428572
+ 
+ 
+single_commit_insert_benchmark:  32.18
+one_commit_per_insert_benchmark:  35.7943661971831
+update_benchmark:  36.25925925925927
+DELETE:  34.54024390243902
+ 
+ 
+single_commit_insert_benchmark:  34.77333333333333
+one_commit_per_insert_benchmark:  40.503076923076925
+update_benchmark:  38.411842105263155
+DELETE:  40.05128205128206
+ 
+ 
+single_commit_insert_benchmark:  31.753488372093024
+one_commit_per_insert_benchmark:  44.1546875
+update_benchmark:  39.48918918918918
+DELETE:  36.79512195121951
+ 
+ 
+single_commit_insert_benchmark:  34.062790697674416
+one_commit_per_insert_benchmark:  40.589230769230774
+update_benchmark:  35.77560975609757
+DELETE:  37.201190476190476
+ 
+ 
+single_commit_insert_benchmark:  34.02325581395349
+one_commit_per_insert_benchmark:  39.881818181818176
+update_benchmark:  39.97820512820513
+DELETE:  37.524096385542165
+ 
+ 
+single_commit_insert_benchmark:  27.75555555555555
+one_commit_per_insert_benchmark:  41.61323529411764
+update_benchmark:  40.324000000000005
+DELETE:  36.84268292682926
+ 
+ 
+single_commit_insert_benchmark:  38.47441860465116
+one_commit_per_insert_benchmark:  39.67796610169492
+update_benchmark:  38.573076923076925
+DELETE:  32.8
+ 
+ 
+single_commit_insert_benchmark:  32.824390243902435
+one_commit_per_insert_benchmark:  33.85757575757576
+update_benchmark:  40.96842105263158
+DELETE:  38.997499999999995
+ 
+ 
+single_commit_insert_benchmark:  35.82894736842106
+one_commit_per_insert_benchmark:  39.989285714285714
+update_benchmark:  39.28684210526316
+DELETE:  37.96341463414634
+ 
+ 
+single_commit_insert_benchmark:  32.523809523809526
+one_commit_per_insert_benchmark:  41.12968750000002
+update_benchmark:  38.24594594594595
+DELETE:  35.18915662650601
+ 
+ 
+single_commit_insert_benchmark:  34.311904761904756
+one_commit_per_insert_benchmark:  35.99452054794521
+update_benchmark:  34.38117647058824
+DELETE:  32.004395604395604
+ 
+ 
+single_commit_insert_benchmark:  34.67857142857143
+one_commit_per_insert_benchmark:  35.95616438356164
+update_benchmark:  37.207407407407395
+DELETE:  38.00121951219512
+ 
+ 
+single_commit_insert_benchmark:  38.8825
+one_commit_per_insert_benchmark:  36.77878787878788
+update_benchmark:  35.25999999999999
+DELETE:  30.427777777777784
+ 
+ 
+single_commit_insert_benchmark:  34.07674418604651
+one_commit_per_insert_benchmark:  41.35
+update_benchmark:  36.86891891891892
+DELETE:  38.70128205128206
+ 
+ 
+single_commit_insert_benchmark:  34.47380952380953
+one_commit_per_insert_benchmark:  36.65217391304348
+update_benchmark:  34.87407407407407
+DELETE:  33.136170212765954
+ 
+ 
+single_commit_insert_benchmark:  32.87954545454545
+one_commit_per_insert_benchmark:  40.91884057971015
+update_benchmark:  37.755
+DELETE:  36.55795454545454
+ 
+ 
+single_commit_insert_benchmark:  33.9
+one_commit_per_insert_benchmark:  39.45942028985507
+update_benchmark:  34.96282051282052
+DELETE:  38.505813953488364
+ 
+ 

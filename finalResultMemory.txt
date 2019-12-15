@@ -1,0 +1,880 @@
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.746 MiB   40.746 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.746 MiB    0.000 MiB       for insert in range(2000):
+    14   40.746 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.746 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.746 MiB   40.746 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.746 MiB    0.000 MiB       for insert in range(2000):
+    21   40.746 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.746 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.746 MiB   40.746 MiB   @profile
+    26                             def update_benchmark():
+    27   40.746 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.746 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.746 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.746 MiB   40.746 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.746 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.746 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.746 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.520 MiB   40.520 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.520 MiB    0.000 MiB       for insert in range(2000):
+    14   40.520 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.520 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.520 MiB   40.520 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.520 MiB    0.000 MiB       for insert in range(2000):
+    21   40.520 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.520 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.520 MiB   40.520 MiB   @profile
+    26                             def update_benchmark():
+    27   40.520 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.520 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.520 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.520 MiB   40.520 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.520 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.520 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.520 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.691 MiB   40.691 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.691 MiB    0.000 MiB       for insert in range(2000):
+    14   40.691 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.691 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.691 MiB   40.691 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.691 MiB    0.000 MiB       for insert in range(2000):
+    21   40.691 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.691 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.691 MiB   40.691 MiB   @profile
+    26                             def update_benchmark():
+    27   40.691 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.691 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.691 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.691 MiB   40.691 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.691 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.691 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.691 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.586 MiB   40.586 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.586 MiB    0.000 MiB       for insert in range(2000):
+    14   40.586 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.586 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.586 MiB   40.586 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.586 MiB    0.000 MiB       for insert in range(2000):
+    21   40.586 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.586 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.586 MiB   40.586 MiB   @profile
+    26                             def update_benchmark():
+    27   40.586 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.586 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.586 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.586 MiB   40.586 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.586 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.586 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.586 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.637 MiB   40.637 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.637 MiB    0.000 MiB       for insert in range(2000):
+    14   40.637 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.637 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.637 MiB   40.637 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.637 MiB    0.000 MiB       for insert in range(2000):
+    21   40.637 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.637 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.637 MiB   40.637 MiB   @profile
+    26                             def update_benchmark():
+    27   40.637 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.637 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.637 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.637 MiB   40.637 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.637 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.637 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.637 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.637 MiB   40.637 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.637 MiB    0.000 MiB       for insert in range(2000):
+    14   40.637 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.637 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.637 MiB   40.637 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.637 MiB    0.000 MiB       for insert in range(2000):
+    21   40.637 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.637 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.637 MiB   40.637 MiB   @profile
+    26                             def update_benchmark():
+    27   40.637 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.637 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.637 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.637 MiB   40.637 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.637 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.637 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.637 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.547 MiB   40.547 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.547 MiB    0.000 MiB       for insert in range(2000):
+    14   40.547 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.547 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.547 MiB   40.547 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.547 MiB    0.000 MiB       for insert in range(2000):
+    21   40.547 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.547 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.547 MiB   40.547 MiB   @profile
+    26                             def update_benchmark():
+    27   40.547 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.547 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.547 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.547 MiB   40.547 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.547 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.547 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.547 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.547 MiB   40.547 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.547 MiB    0.000 MiB       for insert in range(2000):
+    14   40.547 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.547 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.547 MiB   40.547 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.547 MiB    0.000 MiB       for insert in range(2000):
+    21   40.547 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.547 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.547 MiB   40.547 MiB   @profile
+    26                             def update_benchmark():
+    27   40.547 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.547 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.547 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.547 MiB   40.547 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.547 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.547 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.547 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.656 MiB   40.656 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.656 MiB    0.000 MiB       for insert in range(2000):
+    14   40.656 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.656 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.656 MiB   40.656 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.656 MiB    0.000 MiB       for insert in range(2000):
+    21   40.656 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.656 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.656 MiB   40.656 MiB   @profile
+    26                             def update_benchmark():
+    27   40.656 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.656 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.656 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.656 MiB   40.656 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.656 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.656 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.656 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.473 MiB   40.473 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.473 MiB    0.000 MiB       for insert in range(2000):
+    14   40.473 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.473 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.473 MiB   40.473 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.473 MiB    0.000 MiB       for insert in range(2000):
+    21   40.473 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.473 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.473 MiB   40.473 MiB   @profile
+    26                             def update_benchmark():
+    27   40.473 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.473 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.473 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.473 MiB   40.473 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.473 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.473 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.473 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.715 MiB   40.715 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.715 MiB    0.000 MiB       for insert in range(2000):
+    14   40.715 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.715 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.715 MiB   40.715 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.715 MiB    0.000 MiB       for insert in range(2000):
+    21   40.715 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.715 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.715 MiB   40.715 MiB   @profile
+    26                             def update_benchmark():
+    27   40.715 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.715 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.715 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.715 MiB   40.715 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.715 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.715 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.715 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.500 MiB   40.500 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.500 MiB    0.000 MiB       for insert in range(2000):
+    14   40.500 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.500 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.500 MiB   40.500 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.500 MiB    0.000 MiB       for insert in range(2000):
+    21   40.500 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.500 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.500 MiB   40.500 MiB   @profile
+    26                             def update_benchmark():
+    27   40.500 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.500 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.500 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.500 MiB   40.500 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.500 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.500 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.500 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.660 MiB   40.660 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.660 MiB    0.000 MiB       for insert in range(2000):
+    14   40.660 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.660 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.660 MiB   40.660 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.660 MiB    0.000 MiB       for insert in range(2000):
+    21   40.660 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.660 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.660 MiB   40.660 MiB   @profile
+    26                             def update_benchmark():
+    27   40.660 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.660 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.660 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.660 MiB   40.660 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.660 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.660 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.660 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.496 MiB   40.496 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.496 MiB    0.000 MiB       for insert in range(2000):
+    14   40.496 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.496 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.496 MiB   40.496 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.496 MiB    0.000 MiB       for insert in range(2000):
+    21   40.496 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.496 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.496 MiB   40.496 MiB   @profile
+    26                             def update_benchmark():
+    27   40.496 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.496 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.496 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.496 MiB   40.496 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.496 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.496 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.496 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.465 MiB   40.465 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.465 MiB    0.000 MiB       for insert in range(2000):
+    14   40.465 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.465 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.465 MiB   40.465 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.465 MiB    0.000 MiB       for insert in range(2000):
+    21   40.465 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.465 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.465 MiB   40.465 MiB   @profile
+    26                             def update_benchmark():
+    27   40.465 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.465 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.465 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.465 MiB   40.465 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.465 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.465 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.465 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.570 MiB   40.570 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.570 MiB    0.000 MiB       for insert in range(2000):
+    14   40.570 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.570 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.570 MiB   40.570 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.570 MiB    0.000 MiB       for insert in range(2000):
+    21   40.570 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.570 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.570 MiB   40.570 MiB   @profile
+    26                             def update_benchmark():
+    27   40.570 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.570 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.570 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.570 MiB   40.570 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.570 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.570 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.570 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.473 MiB   40.473 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.473 MiB    0.000 MiB       for insert in range(2000):
+    14   40.473 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.473 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.473 MiB   40.473 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.473 MiB    0.000 MiB       for insert in range(2000):
+    21   40.473 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.473 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.473 MiB   40.473 MiB   @profile
+    26                             def update_benchmark():
+    27   40.473 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.473 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.473 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.473 MiB   40.473 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.473 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.473 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.473 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.594 MiB   40.594 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.594 MiB    0.000 MiB       for insert in range(2000):
+    14   40.594 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.594 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.594 MiB   40.594 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.594 MiB    0.000 MiB       for insert in range(2000):
+    21   40.594 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.594 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.594 MiB   40.594 MiB   @profile
+    26                             def update_benchmark():
+    27   40.594 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.594 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.594 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.594 MiB   40.594 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.594 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.594 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.594 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.574 MiB   40.574 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.574 MiB    0.000 MiB       for insert in range(2000):
+    14   40.574 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.574 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.574 MiB   40.574 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.574 MiB    0.000 MiB       for insert in range(2000):
+    21   40.574 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.574 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.574 MiB   40.574 MiB   @profile
+    26                             def update_benchmark():
+    27   40.574 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.574 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.574 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.574 MiB   40.574 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.574 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.574 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.574 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    11   40.547 MiB   40.547 MiB   @profile
+    12                             def single_commit_insert_benchmark():
+    13   40.547 MiB    0.000 MiB       for insert in range(2000):
+    14   40.547 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 250))
+    15   40.547 MiB    0.000 MiB       DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    18   40.547 MiB   40.547 MiB   @profile
+    19                             def one_commit_per_insert_benchmark():
+    20   40.547 MiB    0.000 MiB       for insert in range(2000):
+    21   40.547 MiB    0.000 MiB           CURSOR.execute("INSERT INTO american_football_event_states (id, event_id, current_state, sequence_number, period_value, period_time_elapsed, period_time_remaining, clock_state, down, team_in_possession_id, distance_for_1st_down, field_side, field_line, context) VALUES ({}, '3119', '1', NULL, '0', NULL, '15:00', NULL, NULL, NULL, NULL, NULL, NULL, 'event');".format(insert + 2250))
+    22   40.547 MiB    0.000 MiB           DB.commit()
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    25   40.547 MiB   40.547 MiB   @profile
+    26                             def update_benchmark():
+    27   40.547 MiB    0.000 MiB       for primary_key in range(4000):
+    28   40.547 MiB    0.000 MiB           CURSOR.execute("UPDATE american_football_event_states SET context = 'updated_event' WHERE id = {}".format(
+    29   40.547 MiB    0.000 MiB               primary_key + 250))
+
+
+Filename: benchmark.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    32   40.547 MiB   40.547 MiB   @profile
+    33                             def delete_benchmark():
+    34   40.547 MiB    0.000 MiB       for primary_key in range(4000):
+    35   40.547 MiB    0.000 MiB           CURSOR.execute("DELETE FROM american_football_event_states WHERE id = {}".format(
+    36   40.547 MiB    0.000 MiB               primary_key + 250))
+
+
